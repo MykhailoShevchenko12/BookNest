@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>BOOKNEST - відкрий новий світ на кожній сторінці!</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-line">  
+                <div class="pannel">
+                    <div class="genres">
+                        <div class="button-container">
+                            <img class="img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\logo.png">
+                            <img class="wer" src="\C:\Users\mikha\Desktop\BookStore\Web\img\search.png">
+                            <button class="accordion-btn">Жанри</button>
+                            <a class="pannel-items" href="#">Аксесуари</a>
+                            <a class="pannel-items" href="#">Подарунки</a>
+                            <div class="buy">
+                                <a class="buy-items" href="#">Кошик</a>
+                                <img class="buy-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\buy.png">
+                            </div>
+                            <div class="login">
+                                <img class="login-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\login.png">
+                                <button class="login-items" id="open-modal-btn">Увійти</button>
+                                <div class="modal" id="my-modal">
+                                    <div class="modal-box">
+                                        <form action="/Server/index.js
+                                        " class="form">
+                                            <h1 class="form-title">Авторизація</h1>
+                                            <div class="form-group">
+                                                <input type="text" class="form-input" placeholder=" ">
+                                                <label for="#" class="form-label">Пошта</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-input" placeholder=" ">
+                                                <label for="#" class="form-label">Пароль</label>
+                                            </div>
+                                            <button class="form-button">Ввійти</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="cataloglist">
+                                <div class="genres-list">
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="/C:/Users/mikha/Desktop/BookStore/Web/literature/literature.html"> Художня література </a>
+                                                <p>
+                                                    <a href="#"> Роман </a>
+                                                    <a href="#"> Драма </a>
+                                                    <a href="#"> Комедія </a>
+                                                    <a href="#"> Класична проза </a>
+                                                    <a href="#"> Поезія </a>
+                                                    <a href="#"> Трилер </a>
+                                                    <a href="#"> Детективи </a>
+                                                    <a href="#"> Бойовик </a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Бізнес, Фінанси та Економіка </a>
+                                                <p>
+                                                    <a href="#"> Бухгалтерія </a>
+                                                    <a href="#"> Економіка </a>
+                                                    <a href="#"> Маркетинг </a>
+                                                    <a href="#"> Менеджмент </a>
+                                                    <a href="#"> SoftSkills </a>
+                                                    <a href="#"> Інвестування </a>
+                                                    <a href="#"> Трейдинг </a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Саморозвиток </a>
+                                                <p>
+                                                    <a href="#"> Харчування </a>
+                                                    <a href="#"> Спорт </a>
+                                                    <a href="#"> Медитація </a>
+                                                    <a href="#"> Мотивація </a>
+                                                    <a href="#"> SoftSkills </a>
+                                                    <a href="#"> Гроші </a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Психологія </a>
+                                                <p>
+                                                    <a href="#"> Взаємовідносини </a>
+                                                    <a href="#"> Дитяча псилогія </a>
+                                                    <a href="#"> Соціум </a>
+                                                    <a href="#"> Прикладна психологія </a>
+                                                    <a href="#"> Психотерапія </a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Право </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Медицина </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Наука </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Історія </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Філософія </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Політика </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Дозвілля </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Релігія </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Енциклопедії  </a>
+                                            </div>
+                                        </li>
+                                        <li class="list-item">
+                                            <div class="list-link">
+                                                <a href="#"> Книги для дітей  </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="MainSection">
+        <div class="container">
+            <div class="Section-line">
+                <div class="Banner">
+                    <div class="Search-pannel-2">
+                        <div class="Search-img-2">
+                            <img src="\C:\Users\mikha\Desktop\BookStore\Web\img\search2.png">
+                        </div>
+                        <div class="Nav-2">
+                            Пошук
+                        </div>
+                        <div class="button-search">
+                            <img src="\C:\Users\mikha\Desktop\BookStore\Web\img\galochka.png">
+                        </div>
+                    </div>
+                    <div class="Banner-h">
+                        Книжкова країна для справжніх читачів!
+                    </div>
+                </div>
+                <div class="Releases">
+                    <div class="Rname">
+                        Акційні пропозиції
+                    </div>
+                    <div class="block1">
+                        <div class="text-container">
+                            <a href="#">
+                                <div class="h1">Подарунки кожному!</div>
+                                <div class="p">Даруємо знижки до 30% на всі товари до Нового року! </div>
+                            </a>
+                        </div>                                
+                    </div>
+                    <div class="block2">
+                        <div class="text-container">
+                            <a href="#">
+                                <div class="h1">Середа великих знижок!</div>
+                                <div class="p">Кожної середи у нас спеціальна пропозиція на обраний асортимент! </div>
+                            </a>
+                        </div>       
+                    </div>
+                    <div class="block3">
+                        <div class="text-container">
+                            <a href="#">
+                                <div class="h1">Розіграш мрії!</div>
+                                <div class="p">Можливість виграти головний приз місяця!</div>
+                            </a>
+                        </div>        
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section2">
+        <div class="container">
+            <div class="Section2-line">
+                <div class="S1name">
+                    Хіти художньої літератури
+                </div>
+                <div class="BOX">
+                    <div class="BOX1">
+                        <div class="block">
+                            <div class="block-1">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\donkihot.webp"></a>
+                            </div>
+                            <p>Дон Кіхот</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-2">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\prust.avif"></a>
+                            </div>
+                            <p>У пошуках утраченого часу</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-3">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\ylis.jpg"></a>
+                            </div>
+                            <p>Улліс</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-4">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\odiseya.webp"></a>
+                            </div>
+                            <p>Одіссея</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-5">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\warandpeace.jpg"></a>
+                            </div>
+                            <p>Війна і мир</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-6">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\mobi.jpg"></a>
+                            </div>
+                            <p>Мобі Дік</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-7">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\dante.webp"></a>
+                            </div>
+                            <p>Божественна комедія</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-8">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\gammlet.jpg"></a>
+                            </div>
+                            <p>Гамлет</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-9">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\getsbi.jpg"></a>
+                            </div>
+                            <p>Великий Гетсбі</p>
+                        </div>
+                        <div class="block">
+                            <div class="block-10">
+                                <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\iliada.png"></a>
+                            </div>
+                            <p>Іліада</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section3">
+        <div class="container">
+            <div class="Section3-line">
+                <div class="S2name">
+                    Найпопулярніші 
+                </div>
+                <div class="BOX1">
+                    <div class="block">
+                        <div class="block-1">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\obama.jpeg"></a>
+                        </div>
+                        <p>Становлення</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-2">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\getsbi.jpg"></a>
+                        </div>
+                        <p>Великий Гетсбі</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-3">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\solovey.jpg"></a>
+                        </div>
+                        <p>Соловей</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-4">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\hill.webp"></a>
+                        </div>
+                        <p>Думай і багатій</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-5">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\mich.avif"></a>
+                        </div>
+                        <p>Віднесені вітром</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-6">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\bella.jpg"></a>
+                        </div>
+                        <p>Сутінки. Сага</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-7">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\vinch.jpg"></a>
+                        </div>
+                        <p>Код да Вінчі</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-8">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\alhimik.jpg"></a>
+                        </div>
+                        <p>Алхімік</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-9">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\lordoftherings.jpg"></a>
+                        </div>
+                        <p>Володар перснів</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-10">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\hurry.jpg"></a>
+                        </div>
+                        <p>Гаррі Поттер і філософський камінь </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section4">
+        <div class="container">
+            <div class="Section4-line">
+                <div class="S3name">
+                    Наш Топ-10
+                </div>
+                <div class="BOX1">
+                    <div class="block">
+                        <div class="block-1">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\kiosak.jpg"></a>
+                        </div>
+                        <p>Багатий тато, бідний тато</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-2">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\chol.jpg"></a>
+                        </div>
+                        <p>Чоловіче здоров'я: прості правила</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-3">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\dof.png"></a>
+                        </div>
+                        <p>Дофамінове покоління. Де межа між болем і задоволенням</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-4">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\fin.jpg"></a>
+                        </div>
+                        <p>Фінансист</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-5">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\1984.jpg"></a>
+                        </div>
+                        <p>1984</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-6">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\dale.JPG"></a>
+                        </div>
+                        <p>Як подолати неспокій та почати жити </p>
+                    </div>
+                    <div class="block">
+                        <div class="block-7">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\dos.jpg"></a>
+                        </div>
+                        <p>Китайське дослідження</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-8">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\nats.jpeg"></a>
+                        </div>
+                        <p>Чому нації занепадають? Походження багатства і бідності</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-9">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\shvarc.jpg"></a>
+                        </div>
+                        <p>Згадати все. Моя неймовірно правдива історія</p>
+                    </div>
+                    <div class="block">
+                        <div class="block-10">
+                            <a href="#"><img class="block-img" src="\C:\Users\mikha\Desktop\BookStore\Web\img\hobb.jpg"></a>
+                        </div>
+                        <p>Хоббіт: несподівана подорож</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section5">
+        <div class="container">
+            <div class="Section5-block">
+                <div class="headline1">
+                    Кожна прочитана книга робить тебе краще!
+                </div>
+                <div class="text1">
+                    <p>Читання книг відкриває двері у нові світи, де кожен рядок дарує можливість поринути у пригоди, дізнаватися про інші культури та розширювати власний кругозір.Книги розвивають уяву і творчі здібності, дозволяючи бачити те, що іншим здається прихованим, та створювати нові реальності в своїй свідомості. Регулярне читання покращує пам'ять та концентрацію, допомагаючи тренувати мозок і підтримувати його активним, що важливо на всіх етапах життя. Читання сприяє особистісному зростанню, адже через книги ми вчимося аналізувати, розуміти людей та різні життєві ситуації. Книги допомагають розвинути емпатію, оскільки, читаючи про героїв з різними життєвими труднощами, ми вчимося краще розуміти почуття інших людей. Вивчення нових тем через книги дозволяє бути завжди в курсі подій, забезпечуючи глибоке розуміння різних аспектів сучасного світу. Читання допомагає зняти стрес, занурюючи нас у вигаданий світ і даючи змогу відволіктися від буденних турбот та проблем. Читання книг розширює словниковий запас, роблячи нашу мову багатшою та впевненішою, що сприяє покращенню комунікативних навичок.</p>
+                    <p>Книги — джерело мудрості й натхнення, здатні мотивувати нас до нових звершень та надавати нових ідей для самореалізації.</p>
+                    <p>Читання — це інвестиція у майбутнє, адже воно розвиває критичне мислення, відкриває нові перспективи та формує інтелектуальну базу для досягнення успіху.</p>
+                </div>
+                <div class="headline2">
+                    Залишайся з нами!
+                </div>
+                <div class="text2">
+                    Якщо хочешь бути в курсі останніх новинок, залишай свою поштову адресу та отримуй ексклюзивні рекомендації книг, які змінять твій світогляд!
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Section6">
+        <div class="container">
+            <div class="email">
+                <div class="input">
+                    <div class="input-text">Введіть адресу поштової скриньки </div>
+                </div>
+                <div class="email-button">
+                    <div class="em-bt">Отримувати рекомендації</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Bottom">
+        <div class="bottom-bg">
+            <div class="bottom-line"></div>
+            <div class="Info">
+                <div class="SocInfo">
+                    <div class="info-1">
+                        BOOKNEST в соцмережах:
+                    </div>
+                    <div class="soc">
+                        <div class="insta"><a href="#"><img src="\C:\Users\mikha\Desktop\BookStore\Web\img\instagram.png"></a></div>
+                        <div class="insta"><a href="#"><img src="\C:\Users\mikha\Desktop\BookStore\Web\img\telegram.png"></a></div>
+                        <div class="insta"><a href="#"><img src="\C:\Users\mikha\Desktop\BookStore\Web\img\twitter.png"></a></div>
+                        <div class="insta"><a href="#"><img src="\C:\Users\mikha\Desktop\BookStore\Web\img\facebook.png"></a></div>
+                    </div>
+                </div>
+                <div class="info-2">
+                    <p><a class="bottom-text" href="#">Про BOOKNEST</a></p> 
+                    <p><a class="bottom-text" href="#">Вакансії</a></p> 
+                    <p><a class="bottom-text" href="#">Контакти</a></p>
+                 </div>
+                <div class="info-3">
+                    <p><a class="bottom-text" href="#">Доставка та оплата замовлення</a></p>
+                    <p><a class="bottom-text" href="#">Повернення товару</a></p> 
+                    <p><a class="bottom-text" href="#">Часто запитують</a></p>  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script defer src="login.js"></script>
+    <script src="genrespage.js"></script>
+    
+</body>
+</html>

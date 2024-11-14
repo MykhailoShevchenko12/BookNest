@@ -1,0 +1,118 @@
+<div class="genres-list">
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Художня література </a>
+                            <p>
+                                <a href="#"> Роман </a>
+                                <a href="#"> Драма </a>
+                                <a href="#"> Комедія </a>
+                                <a href="#"> Класична проза </a>
+                                <a href="#"> Поезія </a>
+                                <a href="#"> Трилер </a>
+                                <a href="#"> Детективи </a>
+                                <a href="#"> Бойовик </a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+		<ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Бізнес, Фінанси та Економіка </a>
+                            <p>
+                                <a href="#"> Бухгалтерія </a>
+                                <a href="#"> Економіка </a>
+                                <a href="#"> Маркетинг </a>
+                                <a href="#"> Менеджмент </a>
+                                <a href="#"> SoftSkills </a>
+                                <a href="#"> Інвестування </a>
+                                <a href="#"> Трейдинг </a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Саморозвиток </a>
+                            <p>
+                                <a href="#"> Харчування </a>
+                                <a href="#"> Спорт </a>
+                                <a href="#"> Медитація </a>
+                                <a href="#"> Мотивація </a>
+                                <a href="#"> SoftSkills </a>
+                                <a href="#"> Гроші </a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Психологія </a>
+                            <p>
+                                <a href="#"> Взаємовідносини </a>
+                                <a href="#"> Дитяча псилогія </a>
+                                <a href="#"> Соціум </a>
+                                <a href="#"> Прикладна психологія </a>
+                                <a href="#"> Психотерапія </a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Право </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Медицина </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Наука </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Історія </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Філософія </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Політика </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Дозвілля </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Релігія </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Енциклопедії  </a>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="list-link">
+                            <a href="#"> Книги для дітей  </a>
+                        </div>
+                    </li>
+                </ul>
+</div>
