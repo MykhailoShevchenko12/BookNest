@@ -1,0 +1,165 @@
+.add-book {
+  box-sizing: border-box;
+  font-weight: 500;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px 50px;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-bottom: 300px;
+  border-radius: 20px;
+}
+.addbook-itemfield-img {
+  width: 100%;
+  height: auto;
+  color: #7b7b7b;
+  font-size: 16px;
+  text-align: center;
+}
+.addbook-itemfield {
+  width: 100%;
+  color: black;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.addbook-itemfield p {
+  padding-left: 10px;
+}
+.addbook-itemfield span {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.addbook-itemfield input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  padding-left: 15px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  color: #7b7b7b;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+.addbook-itemfield textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  padding-left: 15px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  color: #7b7b7b;
+  font-family: "Open Sans";
+  font-size: 14px;
+}
+
+.selector-box {
+  width: 100%;
+}
+.addbook-selector {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  font-size: 14px;
+  color: #7b7b7b;
+  background: whitesmoke;
+  border: 1px solid #7b7b7b8d;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Стиль скролбару */
+.addbook-selector::-webkit-scrollbar {
+  width: 5px; /* Ширина скролбару */
+}
+
+/* Стиль "курсор" скролбару */
+.addbook-selector::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 5px; /* Круглі краї */
+}
+
+/* Стиль "порожній" скролбар */
+.addbook-selector::-webkit-scrollbar-track {
+  background: whitesmoke;
+  border-radius: 5px; /* Круглі краї */
+}
+
+.addbook-thumnail-img {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: contain;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.addbook-btn {
+  margin-top: 20px;
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(124, 184, 69);
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0s ease-in;
+}
+
+.addbook-btn:active {
+  background-color: rgb(70, 104, 39);
+}
+
+.clearbook-btn {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 160px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #bb402b;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.1s ease-in;
+}
+.clearbook-btn:active {
+  background-color: #70271a;
+}
+
+.fileInput {
+  display: none;
+}
+.customFileLabel {
+  width: 600px;
+  height: 60px;
+  align-content: center;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #6d737a;
+  color: rgb(209, 209, 209);
+  box-sizing: border-box;
+  border-style: dashed;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.fileName {
+  margin-top: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+.outputImage {
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+}

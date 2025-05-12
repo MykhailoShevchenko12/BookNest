@@ -1,0 +1,122 @@
+.cart {
+  min-height: 62vh;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-content: center;
+}
+
+.cart-header {
+  text-align: center;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 250px;
+}
+
+.cart-items-title {
+  width: 300px;
+  text-align: center;
+}
+
+.cart-items-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.cart-items-quantity button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: hsl(90, 30%, 50%);
+  color: whitesmoke;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-items-quantity button:active {
+  background-color: hsl(91, 31%, 30%);
+}
+
+.cart-items-quantity p {
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 5px 5px;
+  margin: 0px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.cart-items > p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.items-image {
+  width: 117px;
+  height: 166px;
+  border-radius: 10px;
+}
+
+.removefromcart-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-buttons {
+  display: flex;
+}
+
+.cart-order {
+  width: 250px;
+  height: 50px;
+  justify-items: end;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: hsl(0, 30%, 50%);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-order:active {
+  background-color: hsl(0, 30%, 31%);
+}
+
+.cart-return-btn {
+  width: 200px;
+  height: 50px;
+  margin-left: 1rem;
+  justify-items: end;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: hsl(90, 30%, 50%);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-return-btn:active {
+  background-color: hsl(91, 31%, 30%);
+}

@@ -1,0 +1,13 @@
+.search-results-container {
+  margin-top: 50px;
+  min-height: 75vh;
+  text-align: center;
+}
+
+.search-results {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  justify-content: flex-start;
+}

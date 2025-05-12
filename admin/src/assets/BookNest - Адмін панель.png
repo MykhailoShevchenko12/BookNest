@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:5173/addbook -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./BookNest - Адмін панель_files/client"></script>
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./BookNest - Адмін панель_files/css2" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNest - Адмін панель</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/index.css">body{
+  margin: 0;
+  font-family: "Open Sans", serif;
+  background-color: #FFE59C;
+}
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/Navbar/Navbar.css">.navbar{
+    display: flex;
+    height: auto;
+    margin: 0;
+    box-shadow: 0 1px 3px -2px #000;
+}
+.navbar h1{
+    margin-top: 40px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 600;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/pages/Admin/Admin.css">.admin{
+    display: flex;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/Slidebar/Slidebar.css">.slidebar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 100px;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+}
+
+.slidebar-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: whitesmoke;
+    color: #222;
+    gap: 20px;
+    cursor: pointer;
+}
+.slidebar-item img{
+    width: 20px;
+    height: 20px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/AddBook/AddBook.css">.add-book{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 50px;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-bottom: 300px;
+    border-radius: 20px;
+
+}
+.addbook-itemfield-img{
+    width: 100%;
+    height: auto;
+    color: #7b7b7b;
+    font-size: 16px;
+    text-align: center;
+}
+.addbook-itemfield{
+    width: 100%;
+    color: black;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addbook-itemfield p{
+    padding-left: 10px;
+}
+.addbook-itemfield span{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.addbook-itemfield input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    padding-left: 15px;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    color: #7b7b7b;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+.addbook-itemfield textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    padding-left: 15px;
+    border: 1px solid #c3c3c3;
+    outline: none;
+    color: #7b7b7b;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+
+.selector-box{
+    width: 100%;
+}
+.addbook-selector{
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    font-size: 14px;
+    color: #7b7b7b;
+    background: whitesmoke;
+    border: 1px solid #7b7b7b8d;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Стиль скролбару */
+.addbook-selector::-webkit-scrollbar {
+    width: 5px; /* Ширина скролбару */
+}
+
+/* Стиль "курсор" скролбару */
+.addbook-selector::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 5px; /* Круглі краї */
+}
+
+/* Стиль "порожній" скролбар */
+.addbook-selector::-webkit-scrollbar-track {
+    background: whitesmoke;
+    border-radius: 5px; /* Круглі краї */
+}
+
+
+.addbook-thumnail-img{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: contain;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.addbook-btn{
+    margin-top: 20px;
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(124, 184, 69);
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.s ease-in;
+}
+
+.addbook-btn:active{
+    background-color:  rgb(70, 104, 39);;
+}
+
+.clearbook-btn{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 160px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #bb402b;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.1s ease-in;
+}
+.clearbook-btn:active{
+    background-color: #70271a;
+}
+
+.fileInput {
+    display: none;
+  }
+  .customFileLabel {
+    width: 600px;
+    height: 60px;
+    align-content: center;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #6d737a;
+    color: rgb(209, 209, 209);
+    box-sizing: border-box;
+    border-style:dashed;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+.fileName {
+    margin-top: 10px;
+    color: #555;
+    font-style: italic;
+  }
+
+  .outputImage{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+  }</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/BookList/BookList.css">.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 200px); /* Загальна ширина 1920px - 100px зліва і 100px справа */
+    height: 900px;
+    border-radius: 10px;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    overflow: hidden; /* Зачиняє переповнення */
+    margin-left: 100px; /* Відступ зліва */
+    margin-right: 100px; /* Відступ справа */
+}
+
+.listproduct-format-main {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    color: #454545;
+    font-size: 15px;
+}
+.listproduct-format-main p{
+    justify-items: flex-start;
+}
+.listproduct-format-main-book{
+    margin-left: 60px;
+}
+.listproduct-format-main-title{
+    margin-left: 190px;
+}
+.listproduct-format-main-category{
+    margin-left: 200px;
+}
+.listproduct-format-main-price{
+    margin-left: 150px;
+}
+.listproduct-format-main-edit{
+    margin-left: 50px;
+}
+.listproduct-format-main-remove{
+    margin-left: 50px;
+}
+
+.listproduct-format {
+    align-items: center;
+    text-align: center;
+}
+
+.listproduct-format-title{
+    width: 200px;
+    margin-left: 50px;
+}
+.listproduct-format-category{
+    width: 200px;
+    margin-left: 60px;
+}
+.listproduct-format-price{
+    margin-left: 85px;
+}
+
+.listproduct-product-icon {
+    width: 164px;
+    height: 232px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.listproduct-edit-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 80px;
+}
+
+.listproduct-remove-icon {
+    width: 20px;
+    cursor: pointer;
+    margin-left: 110px;
+}
+
+.listproduct-allproducts {
+    overflow-y: auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 99%;
+    padding-right: 10px; /* Відступ для скролбару */
+}
+
+/* Стиль скролбару */
+.listproduct-allproducts::-webkit-scrollbar {
+    width: 20px; /* Ширина скролбару */
+}
+
+/* Стиль "курсор" скролбару */
+.listproduct-allproducts::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 5px; /* Круглі краї */
+}
+
+/* Стиль "порожній" скролбар */
+.listproduct-allproducts::-webkit-scrollbar-track {
+    background: whitesmoke;
+    border-radius: 5px; /* Круглі краї */
+}
+
+hr {
+    width: 70%;
+    height: 1px;
+    border-radius: 20px;
+    background-color: #454545;
+    opacity: 50%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/EditBook/EditBook.css">
+
+
+
+.edit-btn{
+    margin-top: 10px;
+    width: 160px;
+    height: 50px;
+    background-color: #3a68cc;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+}
+
+.edit-btn:active{
+    background-color: #254385;
+}
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/mikha/Desktop/Дипломна-робота-Шевченко-ІН-401зк/admin/src/components/Orders/Orders.css">.orders{
+    width: 100%;
+    margin: 100px 100px;
+    font-family: 'Open Sans';
+}
+
+.orders h1{
+    font-weight: 600;
+    color: #222;
+    text-align: center;
+}
+
+.search-container{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.search-container input{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #454545;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.order-pages{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.orders-page-btn{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #454545;
+    font-size: 14px;
+    font-weight: 600;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.orders-page-btn.active {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    background-color: #e0e0e0; /* Змінюйте колір для більшого ефекту */
+  }
+
+.orders-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+
+.orders-item-icon{
+    width: auto;
+    height: 100px;
+}
+
+.orders-item-info{
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-item-info h2{
+    margin: 0;
+}
+
+.orders-item-info-block{
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.orders-item-info-block span{
+    color: #454545;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.orders-item-info-block p{
+    color: #454545;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.block-items{
+    margin-left: 50px;
+}
+
+.orders-item-status{
+    justify-items: center;
+    margin: 20px 20px;
+}
+
+.orders-item-status p{
+    color: #454545;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.orders-item-status select{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+hr{
+    height: 1px;
+    width: inherit;
+    background: #454545;
+    opacity: 50%;
+}
+
+</style></head>
+  <body>
+    <div id="root"><div><div class="navbar"><img src="./BookNest - Адмін панель_files/logo.png" alt=""><h1>- Панель керування магазином</h1></div><div class="admin"><div class="slidebar"><a class="slidebar-item" href="http://localhost:5173/addbook" data-discover="true" style="text-decoration: none;"><img src="./BookNest - Адмін панель_files/plus-icon-2048x2048-z6v59bd6.png" alt=""><p>Додати книгу</p></a><a class="slidebar-item" href="http://localhost:5173/listbook" data-discover="true" style="text-decoration: none;"><img src="./BookNest - Адмін панель_files/listimg.png" alt=""><p>Налаштування каталогу</p></a><a class="slidebar-item" href="http://localhost:5173/orders" data-discover="true" style="text-decoration: none;"><img src="./BookNest - Адмін панель_files/orders.png" alt=""><p>Обробка замовлень</p></a></div><div class="add-book"><form class="addbook-form"><div class="addbook-itemfield-img"><div class="addImage"><label for="fileInput" class="customFileLabel">Додати обкладинку:</label><input type="file" id="fileInput" class="fileInput"><div class="fileName"><img class="outputImage" src="blob:http://localhost:5173/61143253-d413-4002-968b-8186180f79a9" alt="dof.png"><div>dof.png</div></div></div></div><div class="addbook-itemfield"><p>Назва книги</p><input type="text" name="name" value="Дофамінове покоління"></div><div class="addbook-itemfield"><p>Категорії</p><input type="text" name="categories" value="Саморозвиток, Психологія"></div><div class="addbook-itemfield" style="text-align: center;"><span>Список категорій</span><div class="selector-box"><select multiple="" name="category" class="addbook-selector"><option value="Художня література">Художня література</option><option value="Фінанси та Економіка">Фінанси та Економіка</option><option value="Саморозвиток">Саморозвиток</option><option value="Психологія">Психологія</option><option value="Комп&#39;ютерна література">Комп'ютерна література</option><option value="Енциклопедії">Енциклопедії</option><option value="Історія">Історія</option><option value="Медицина">Медицина</option><option value="Філософія">Філософія</option><option value="Політика">Політика</option><option value="Релігія">Релігія</option><option value="Наука">Наука</option><option value="Право">Право</option><option value="Дозвілля">Дозвілля</option><option value="Книги для Дітей">Книги для Дітей</option></select></div></div><div class="addbook-itemfield"><p>Жанри</p><input type="text" name="genres" value="Книги для Дітей, Прикладна психологія, Психотерапія"></div><div class="addbook-itemfield" style="text-align: center;"><span>Список жанрів</span><div class="selector-box"><select multiple="" name="genre" class="addbook-selector"><option value="Роман">Роман</option><option value="Драма">Драма</option><option value="Комедія">Комедія</option><option value="Проза">Проза</option><option value="Поезія">Поезія</option><option value="Фентезі">Фентезі</option><option value="Фантастика">Фантастика</option><option value="П&#39;єса">П'єса</option><option value="Трагедія">Трагедія</option><option value="Трилер">Трилер</option><option value="Детективи">Детективи</option><option value="Бойовик">Бойовик</option><option value="Бухгалтерія">Бухгалтерія</option><option value="Економіка">Економіка</option><option value="Підприємство">Підприємство</option><option value="Маркетинг">Маркетинг</option><option value="Реклама">Реклама</option><option value="Менеджмент">Менеджмент</option><option value="SoftSkills">SoftSkills</option><option value="Інвестиції">Інвестиції</option><option value="Трейдинг">Трейдинг</option><option value="Харчування">Харчування</option><option value="Спорт">Спорт</option><option value="Маркетинг">Маркетинг</option><option value="Медитація">Медитація</option><option value="Книги для Дітей">Мотивація</option><option value="SoftSkills">SoftSkills</option><option value="Гроші">Гроші</option><option value="Взаємовідносини">Взаємовідносини</option><option value="Дитяча психологія">Дитяча психологія</option><option value="Суспільство">Суспільство</option><option value="Психічне здоров&#39;я">Психічне здоров'я</option><option value="Прикладна психологія">Прикладна психологія</option><option value="Психотерапія">Психотерапія</option><option value="Суспільство">Суспільство</option><option value="Держава">Держава</option><option value="Культурологія">Культурологія</option><option value="Казки">Казки</option><option value="Виховання">Виховання</option><option value="Дитяча психологія">Дитяча психологія</option><option value="Технології">Технології</option></select></div></div><div class="addbook-itemfield"><p>Кількість сторінок</p><input type="text" name="pages" value="208"></div><div class="addbook-itemfield"><p>Формат</p><input type="text" name="format" value="Паперова"></div><div class="addbook-itemfield"><p>Автор</p><input type="text" name="author" value="Анна Лембке"></div><div class="addbook-itemfield"><p>Видання</p><input type="text" name="edition" value="Любисток"></div><div class="addbook-price"><div class="addbook-itemfield"><p>Ціна</p><input type="text" name="price" value="359"></div></div><div class="addbook-itemfield"><p>Опис</p><textarea>«Дофамінове покоління» — книга, написана доктором Анною Лембке, психіатром і експертом у галузі залежностей. У своїй книзі Лембке досліджує, як сучасний світ з його технологіями, миттєвими задоволеннями та цифровими стимулами впливає на рівень дофаміну в мозку і веде до залежностей. Вона розповідає про механізми дофаміну — нейротрансмітера, що відповідає за відчуття задоволення, мотивацію та винагороду, і як це може спричинити прагнення до постійного стимулювання. Лембке пояснює, як надмірне споживання технологій, соціальних мереж, їжі, наркотиків та інших форм миттєвих задоволень може призвести до розбалансованості в мозку, викликаючи залежність і психологічні проблеми. Вона пропонує шляхи відновлення, зокрема через розуміння природи залежності, практики самоконтролю, усвідомленості та пошук здорових форм задоволення. Книга адресована не лише тим, хто має проблеми з залежностями, але й усім, хто хоче краще зрозуміти вплив дофаміну на наше життя і знайти шлях до більш здорового, збалансованого способу життя в епоху перевантаження інформацією та миттєвими стимулами.</textarea></div><button type="submit" class="addbook-btn">Додати</button><button type="button" class="clearbook-btn">Очистити форму</button></form></div></div></div>,</div>
+    <script type="module" src="./BookNest - Адмін панель_files/main.jsx"></script>
+  
+
+</body></html>

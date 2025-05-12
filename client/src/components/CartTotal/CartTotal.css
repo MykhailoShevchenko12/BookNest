@@ -1,0 +1,15 @@
+.carttotal {
+  width: 500px;
+}
+
+.carttotal h2 {
+  text-align: start;
+}
+
+.carttotal-items {
+  font-weight: 500;
+}
+
+.carttotal-items strong {
+  font-size: 18px;
+}

@@ -1,0 +1,18 @@
+.contacts-main {
+  min-height: 70vh;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.contacts-info {
+  width: 50%;
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  text-align: justify;
+}
+
+.contacts-info p {
+  text-indent: 25px;
+}

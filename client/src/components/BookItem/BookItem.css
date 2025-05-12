@@ -1,0 +1,27 @@
+.item {
+  transition: transform 0.3s ease;
+  margin: 0;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item-box {
+  text-align: center;
+  margin: 0;
+}
+
+.item-box img {
+  margin: 0;
+  width: 117px;
+  height: 166px;
+  border-radius: 10px;
+}
+.item-box p {
+  max-width: 116px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(63, 63, 63);
+}

@@ -1,0 +1,216 @@
+.main-page {
+  margin-top: 50px;
+}
+
+.bookcategorytext {
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.preview-section {
+  display: flex;
+  width: auto;
+  height: 30rem;
+  margin-bottom: 50px;
+}
+
+.banner {
+  display: inline-block;
+  position: relative;
+  align-content: center;
+  justify-items: center;
+  width: 73rem;
+  height: 30rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../images/banner.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  color: #ffe59c;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.search-pannel {
+  width: 400px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin-left: 55px;
+  padding: 0px 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454545;
+  box-sizing: border-box;
+}
+
+/*----special-offers------*/
+.special-offers {
+  margin-left: 20px;
+}
+
+.special-offers span {
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.offer {
+  width: 400px;
+  height: 9rem;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #fdf6e3;
+  display: flex;
+}
+
+.offer-book-img {
+  width: 5rem;
+  height: 7rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.offer p {
+  width: 200px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.offer-title-price {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-price {
+  text-align: center;
+  width: 5rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background-color: #ffe59c;
+}
+
+.bookcategory {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookcategorylink {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #454545;
+  opacity: 90%;
+}
+
+.category-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-inspiration-emailnotification {
+  margin-top: 50px;
+}
+
+.inspiration h1 {
+  padding-left: 30px;
+}
+
+.inspiration p {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: justify;
+  text-indent: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.emailnotification {
+  margin-top: 50px;
+}
+
+.emailnotification h2 {
+  padding-left: 30px;
+}
+
+.emailnotification p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: justify;
+  text-indent: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.email-input {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.email-input input {
+  width: 350px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454545;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.email-input button {
+  width: 250px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: hsl(0, 30%, 50%);
+  color: whitesmoke;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.email-input button:active {
+  background-color: hsl(0, 30%, 31%);
+}
+
+.custom-icon {
+  margin-left: 1rem;
+  font-size: 24px;
+  color: #be941f;
+  transition: transform 0.3s ease;
+}
+
+.custom-icon:hover {
+  transform: translateX(5px); /* Ефект при наведенні */
+}

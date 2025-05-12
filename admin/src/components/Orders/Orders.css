@@ -1,0 +1,135 @@
+.orders {
+  width: 100%;
+  margin: 100px 100px;
+  font-family: "Open Sans";
+}
+
+.orders h1 {
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.search-container {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-container input {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #454545;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.order-pages {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.orders-page-btn {
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffffff;
+  color: #454545;
+  font-size: 14px;
+  font-weight: 600;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.orders-page-btn.active {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  background-color: #e0e0e0; /* Змінюйте колір для більшого ефекту */
+}
+
+.orders-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.orders-item-icon {
+  width: auto;
+  height: 100px;
+}
+
+.orders-item-info {
+  padding: 20px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.orders-item-info h2 {
+  margin: 0;
+}
+
+.orders-item-info-block {
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.orders-item-info-block span {
+  color: #454545;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.orders-item-info-block p {
+  color: #454545;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.block-items {
+  margin-left: 50px;
+}
+
+.orders-item-status {
+  justify-items: center;
+  margin: 20px 20px;
+}
+
+.orders-item-status p {
+  color: #454545;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.orders-item-status select {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+hr {
+  height: 1px;
+  width: inherit;
+  background: #454545;
+  opacity: 50%;
+}

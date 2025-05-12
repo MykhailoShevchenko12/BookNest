@@ -1,0 +1,91 @@
+.category-main {
+  width: 300px;
+  height: 35px;
+  background-color: #eca16e;
+  border-radius: 20px;
+  align-content: center;
+  text-align: center;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+.header-category {
+  justify-items: center;
+}
+
+.category-main span {
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+}
+
+.productListContainer {
+  width: 1620px;
+  height: auto;
+  min-height: 60vh;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.productList {
+  width: 1620px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+  gap: 2зч; /* відступ між елементами */
+  justify-content: first baseline;
+}
+
+.productListPages {
+  width: auto;
+  height: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.productListPagesButtons {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #222;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productListPagesButtons.active {
+  background-color: hsl(90, 30%, 50%);
+  color: white;
+  border: 2px solid hsl(90, 60%, 40%);
+}
+
+@media (max-width: 1200px) {
+  .productList {
+    grid-template-columns: repeat(
+      8,
+      1fr
+    ); /* зменшуємо до 8 колонок на менших екранах */
+  }
+}
+
+@media (max-width: 900px) {
+  .productList {
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* зменшуємо до 6 колонок на ще менших екранах */
+  }
+}
+
+@media (max-width: 600px) {
+  .productList {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* зменшуємо до 4 колонок на мобільних екранах */
+  }
+}

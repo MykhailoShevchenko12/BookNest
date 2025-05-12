@@ -1,0 +1,116 @@
+.list-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(
+    100% - 200px
+  ); /* Загальна ширина 1920px - 100px зліва і 100px справа */
+  height: 900px;
+  border-radius: 10px;
+  font-family: "Open Sans", serif;
+  font-weight: 500;
+  overflow: hidden; /* Зачиняє переповнення */
+  margin-left: 100px; /* Відступ зліва */
+  margin-right: 100px; /* Відступ справа */
+}
+
+.listproduct-format-main {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  color: #454545;
+  font-size: 15px;
+}
+.listproduct-format-main p {
+  justify-items: flex-start;
+}
+.listproduct-format-main-book {
+  margin-left: 60px;
+}
+.listproduct-format-main-title {
+  margin-left: 190px;
+}
+.listproduct-format-main-category {
+  margin-left: 200px;
+}
+.listproduct-format-main-price {
+  margin-left: 150px;
+}
+.listproduct-format-main-edit {
+  margin-left: 50px;
+}
+.listproduct-format-main-remove {
+  margin-left: 50px;
+}
+
+.listproduct-format {
+  align-items: center;
+  text-align: center;
+}
+
+.listproduct-format-title {
+  width: 200px;
+  margin-left: 50px;
+}
+.listproduct-format-category {
+  width: 200px;
+  margin-left: 60px;
+}
+.listproduct-format-price {
+  margin-left: 85px;
+}
+
+.listproduct-product-icon {
+  width: 164px;
+  height: 232px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.75);
+}
+
+.listproduct-edit-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 80px;
+}
+
+.listproduct-remove-icon {
+  width: 20px;
+  cursor: pointer;
+  margin-left: 110px;
+}
+
+.listproduct-allproducts {
+  overflow-y: auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 99%;
+  padding-right: 10px; /* Відступ для скролбару */
+}
+
+/* Стиль скролбару */
+.listproduct-allproducts::-webkit-scrollbar {
+  width: 20px; /* Ширина скролбару */
+}
+
+/* Стиль "курсор" скролбару */
+.listproduct-allproducts::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 5px; /* Круглі краї */
+}
+
+/* Стиль "порожній" скролбар */
+.listproduct-allproducts::-webkit-scrollbar-track {
+  background: whitesmoke;
+  border-radius: 5px; /* Круглі краї */
+}
+
+hr {
+  width: 70%;
+  height: 1px;
+  border-radius: 20px;
+  background-color: #454545;
+  opacity: 50%;
+}

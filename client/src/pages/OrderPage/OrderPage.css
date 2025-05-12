@@ -1,0 +1,119 @@
+.order {
+  min-height: 62vh;
+  margin-top: 50px;
+}
+
+.page-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-info {
+  width: 800px;
+  margin-top: 50px;
+}
+
+.order-info p {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.order-info input {
+  height: 45px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  padding: 5px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454545;
+}
+
+.user-info {
+  display: flex;
+  justify-content: space-between; /* Розподіляє простір між елементами */
+  width: 100%; /* За необхідності */
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-info button {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post-info button:focus {
+  background: rgb(228, 228, 228);
+}
+
+.post-info input {
+  margin-bottom: 10px;
+}
+
+.payment-method {
+  display: flex;
+}
+
+.payment-method label {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.payment-method label input {
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+}
+
+.payment-method label p {
+  cursor: pointer;
+}
+
+.order-cart-total {
+  margin-top: 50px;
+}
+
+.order-cart-total button {
+  width: 250px;
+  height: 50px;
+  margin-top: 2rem;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: hsl(0, 30%, 50%);
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-cart-total button:active {
+  background-color: hsl(0, 30%, 31%);
+}
+
+.order-warning {
+  margin-top: 5rem;
+  width: 100rem;
+  text-align: justify;
+  text-indent: 15px;
+  font-size: 14px;
+}

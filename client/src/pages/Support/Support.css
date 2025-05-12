@@ -1,0 +1,94 @@
+.support-main {
+  min-height: 70vh;
+  margin-top: 50px;
+  justify-items: center;
+}
+
+.support-container {
+  width: 50%;
+  text-align: justify;
+}
+
+.support-container p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.accordion-faq {
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.support-form {
+  justify-items: center;
+  margin-top: 5rem;
+}
+
+.support-form-question {
+  display: grid;
+  justify-items: center;
+}
+
+.support-email-input {
+  width: 350px;
+  height: 35px;
+  margin-bottom: 0.5rem;
+  padding: 0px 25px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #454545;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.question-text {
+  display: block;
+  width: 350px;
+  height: 150px;
+  margin-bottom: 0.5rem;
+  padding: 25px 25px;
+  font-size: 12px;
+  font-weight: 600;
+  align-items: baseline;
+  color: #454545;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  resize: none;
+}
+
+.support-form-question button {
+  width: 150px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: hsl(0, 30%, 50%);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.support-form-question button:active {
+  background-color: hsl(0, 30%, 31%);
+}
+
+.support-form-question p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.delivery-and-payment p {
+  margin: 0;
+  padding-top: 5px;
+  text-align: justify;
+}
+
+.delivery-and-payment li {
+  text-indent: 25px;
+}

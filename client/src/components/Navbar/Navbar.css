@@ -1,0 +1,233 @@
+.header {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Open Sans" sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nav-pannel {
+  display: flex;
+  width: 800px;
+  height: 40px;
+  background: #ffe59c;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 1rem;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul a {
+  text-decoration: none;
+  color: #222;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul a:hover {
+  color: #be941f;
+}
+
+.user-cart-login {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-cart {
+  display: flex;
+  width: 100px;
+  height: auto;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.cart-count {
+  width: 20px; /* Збільшення ширини */
+  height: 20px; /* Збільшення висоти */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -15px;
+  margin-left: 20px;
+  border-radius: 50%; /* Коло */
+  font-size: 14px;
+  background: red;
+  color: whitesmoke;
+  font-weight: bold; /* Для жирного тексту */
+  position: absolute;
+}
+
+.user-cart span {
+  border-right: 2px solid #454545;
+  margin-right: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+.user-icons {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.user-login {
+  display: flex;
+  width: 100px;
+  height: auto;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.user-login span {
+  border-right: 2px solid #454545;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
+.user-login button {
+  border: none;
+  background: none;
+  margin-top: 3px;
+  margin-right: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.user-menu {
+  position: absolute;
+  right: 10rem;
+  top: 5rem;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  min-width: 150px;
+}
+
+.user-menu-item {
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #222;
+  text-decoration: none;
+}
+
+.user-menu-item p {
+  margin: 5px 0px;
+  transition: color 0.3s ease;
+}
+
+.user-menu-item p:hover {
+  color: #be941f;
+}
+
+/*------------Drop-down menu-----------------*/
+.catalog-btn {
+  text-decoration: none;
+  border: none;
+  background: #ffe59c;
+  color: #222;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
+}
+.catalog-btn:hover {
+  color: #be941f;
+}
+.catalog {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  width: 1500px;
+  background-color: whitesmoke;
+  height: 400px;
+  border-radius: 20px;
+  left: 220px;
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+  align-items: start;
+}
+.catalog.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.list {
+  width: 250px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.list a {
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: grid;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.list p a {
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(63, 63, 63);
+}
+
+.list a:hover {
+  color: #be941f;
+}
+
+.catalog-list {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+
+.allProductLink {
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 1380px;
+  transition: color 0.3s ease;
+}
+
+.allProductLink:hover {
+  color: #be941f;
+}

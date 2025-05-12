@@ -1,0 +1,27 @@
+.slidebar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-left: 100px;
+  gap: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+}
+
+.slidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: whitesmoke;
+  color: #222;
+  gap: 20px;
+  cursor: pointer;
+}
+.slidebar-item img {
+  width: 20px;
+  height: 20px;
+}
