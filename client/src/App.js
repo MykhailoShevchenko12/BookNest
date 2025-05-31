@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Toaster } from "sonner";
 
 import { Layout } from "./components/Layout";
+import { Footer } from "./components/Footer/Footer";
 import { MainPage } from "./pages/MainPage/MainPage";
 import { Cart } from "./pages/Cart/Cart";
 import { getMe } from "./redux/features/authSlice";
@@ -14,8 +15,6 @@ import { ProductPage } from "./pages/ProductPage/ProductPage";
 import { ProductListPage } from "./pages/ProductListPage/ProductListPage";
 import { OrderPage } from "./pages/OrderPage/OrderPage";
 import { MyOrdersPage } from "./pages/MyOrdersPage/MyOrdersPage";
-import { Gifts } from "./pages/Gifts/Gifts";
-import { Accessories } from "./pages/Acccessories/Accessories";
 import { Categories } from "./pages/Categories/Categories";
 import { Genres } from "./pages/Genres/Genres";
 import { SearchPage } from "./pages/SearchPage/SearchPage";
@@ -31,7 +30,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="App">
       <Layout>
         <Routes>
           <Route path="/products/:category" element={<Categories />} />
@@ -46,15 +45,14 @@ function App() {
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/order" element={<OrderPage />} />
           <Route path="/myorders" element={<MyOrdersPage />} />
-          <Route path="/gifts" element={<Gifts />} />
-          <Route path="/accessories" element={<Accessories />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/support" element={<Support />} />
         </Routes>
       </Layout>
+      <Footer />
       <Toaster position="bottom-center" richColors />
-    </>
+    </div>
   );
 }
 

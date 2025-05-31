@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Orders.css";
 import axios from "axios";
-import { useEffect } from "react";
 
 export const Orders = () => {
   const [orders, setOrders] = useState([]);
-  const [filterStatus, setFilterStatus] = useState("");
+  const [filterStatus, setFilterStatus] = useState("Очікує підтвердження");
   const [searchOrderId, setSearchOrderId] = useState("");
 
   const fetchAllOrders = async () => {
     try {
-      const respons = await axios.post(
-        "http://localhost:3002/api/order/list",
-        {},
-        {}
-      );
+      const respons = await axios.get("http://localhost:3002/api/order/list");
 
       if (respons.data.success) {
         const sortedOrders = respons.data.orders.sort(
@@ -22,7 +17,7 @@ export const Orders = () => {
         );
         setOrders(sortedOrders);
       } else {
-        console.log(error);
+        console.log("Помилка при отриманні замовлень");
       }
     } catch (error) {
       console.log(error);
@@ -38,7 +33,7 @@ export const Orders = () => {
       );
       if (response.data.success) {
         fetchAllOrders();
-        setFilterStatus("");
+        setFilterStatus("Очікує підтвердження");
       } else {
         console.log("Помилка при оновленні статусу");
       }
@@ -56,14 +51,12 @@ export const Orders = () => {
   }, []);
 
   const filteredOrders = orders.filter((order) => {
-    const matchesStatus = filterStatus ? order.status === filterStatus : true;
-
-    // Якщо searchOrderId порожній, то не фільтруємо за номером
-    const matchesOrderId = searchOrderId
-      ? order.orderId.toString().toLowerCase() === searchOrderId.toLowerCase()
-      : true;
-
-    return matchesStatus && matchesOrderId;
+    return (
+      order.status === filterStatus &&
+      (searchOrderId
+        ? order.orderId.toString().toLowerCase() === searchOrderId.toLowerCase()
+        : true)
+    );
   });
 
   return (
@@ -80,12 +73,6 @@ export const Orders = () => {
       </div>
 
       <div className="order-pages">
-        <button
-          onClick={() => setFilterStatus("")}
-          className={`orders-page-btn ${filterStatus === "" ? "active" : ""}`}
-        >
-          Всі
-        </button>
         <button
           onClick={() => setFilterStatus("Очікує підтвердження")}
           className={`orders-page-btn ${
@@ -127,6 +114,7 @@ export const Orders = () => {
           Отримано
         </button>
       </div>
+
       <div className="orders-container">
         {filteredOrders.map((order, index) => (
           <div key={index}>
@@ -189,23 +177,21 @@ export const Orders = () => {
                         Статус оплати:{" "}
                         {order.paymentMethod === "Оплата при отриманні товару"
                           ? "Неоплачено"
-                          : order.status}
+                          : order.payment}
                       </p>
                       <p>
                         Дата оформлення замовлення:{" "}
                         {new Date(order.date).toLocaleDateString()}
                       </p>
                       <div>
-                        {order.items.map((item, index) => {
-                          return (
-                            <div key={index}>
-                              <p>
-                                Залишок на складі:{" "}
-                                {item.quantityInStock ?? "Не вказано"}
-                              </p>
-                            </div>
-                          );
-                        })}
+                        {order.items.map((item, index) => (
+                          <div key={index}>
+                            <p>
+                              Залишок на складі:{" "}
+                              {item.quantityInStock ?? "Не вказано"}
+                            </p>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </div>

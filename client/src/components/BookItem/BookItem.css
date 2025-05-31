@@ -1,10 +1,5 @@
 .item {
-  transition: transform 0.3s ease;
   margin: 0;
-}
-
-.item:hover {
-  transform: scale(1.05);
 }
 
 .item-box {
@@ -14,10 +9,16 @@
 
 .item-box img {
   margin: 0;
-  width: 117px;
-  height: 166px;
+  width: 8rem;
+  height: 11.5rem;
   border-radius: 10px;
+  transition: transform 0.3s ease;
 }
+
+.item-box img:hover {
+  transform: scale(1.05);
+}
+
 .item-box p {
   max-width: 116px;
   font-family: "Open Sans", sans-serif;
@@ -25,3 +26,8 @@
   font-weight: 600;
   color: rgb(63, 63, 63);
 }
+
+/*
+transform: scale(1.05);
+ transition: transform 0.3s ease;
+*/

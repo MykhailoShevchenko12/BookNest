@@ -1,17 +1,21 @@
 .about-main {
-  min-height: 70vh;
-  margin-top: 50px;
-  justify-items: center;
+  display: flex;
+  width: 60vw;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
 }
 
 .about-container {
-  width: 50%;
+  width: 100%;
   justify-items: center;
   text-align: justify;
 }
 
 .about-text {
-  margin-top: 50px;
+  margin-top: 3rem;
   font-size: 16px;
   font-weight: 500;
   color: #222;

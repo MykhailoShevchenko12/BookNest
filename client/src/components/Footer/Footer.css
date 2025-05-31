@@ -1,10 +1,7 @@
 .footer {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  left: 0;
-  right: 0;
-  background-color: #969696;
+  height: 9rem;
+  margin-top: auto;
+  background-color: rgba(93, 103, 112, 0.8);
   color: whitesmoke;
   font-size: 14px;
   font-weight: 600;
@@ -14,26 +11,29 @@
   width: 100%;
   height: 2px;
   background-color: white;
-  margin-top: 30px;
-  position: absolute;
+  margin-top: 1rem;
 }
 
 .social-img {
   width: 30px;
   height: 30px;
-  margin-top: 10px;
+  margin-top: 0.1rem;
   margin-right: 10px;
   cursor: pointer;
 }
 
 .footer-info {
-  margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 0.3rem;
+}
+
+.socialmedia {
+  margin-top: 0.2rem;
 }
 
 .about-items li {
-  margin-top: 10px;
+  margin-top: 0.1rem;
 }
 
 .footer-privacy {

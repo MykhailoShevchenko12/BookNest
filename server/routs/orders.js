@@ -9,13 +9,11 @@ import {
 
 const router = new Router();
 
-//Admin features
-router.post("/list", allOrders);
+router.get("/list", allOrders);
+
 router.patch("/status/:orderId", updateOrderStatus);
 
-//Payment features
 router.post("/place", checkAuth, placeOrder);
-/*router.post('/privat', checkAuth, placeOrderPrivat)*/
 
 router.get("/userorders", checkAuth, userOrders);
 

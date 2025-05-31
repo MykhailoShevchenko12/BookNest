@@ -129,11 +129,19 @@ export const Genres = () => {
     return <div>{error}</div>;
   }
 
+  const capitalizeWords = (text) =>
+    text
+      ?.split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
   return (
-    <div className="main-container">
+    <div className="category-page">
       <div className="header-category">
         <div className="category-main">
-          <span>{genresMapping[genres?.toLowerCase()] || genres}</span>
+          <span>
+            {capitalizeWords(genresMapping[genres?.toLowerCase()] || genres)}
+          </span>
         </div>
       </div>
       <div className="productListContainer">

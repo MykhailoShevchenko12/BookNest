@@ -1,8 +1,11 @@
 .header {
   display: flex;
-  height: 70px;
+  width: 90vw;
+  height: 5rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
   font-family: "Open Sans" sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -40,18 +43,21 @@
   color: #be941f;
 }
 
+.navigate-links {
+  width: 5rem;
+}
+
 .user-cart-login {
-  width: 250px;
+  width: 7rem;
   display: flex;
-  justify-content: space-between;
 }
 
 .user-cart {
   display: flex;
-  width: 100px;
+  width: 3rem;
   height: auto;
   align-items: center;
-  margin-left: 50px;
+  margin-right: 3rem;
 }
 
 .cart-count {
@@ -88,7 +94,6 @@
   width: 100px;
   height: auto;
   align-items: center;
-  margin-left: 50px;
 }
 
 .user-login span {
@@ -108,14 +113,9 @@
   font-weight: 700;
 }
 
-.user-icons {
-  width: 30px;
-  height: 30px;
-}
-
 .user-menu {
   position: absolute;
-  right: 10rem;
+  right: 7.5rem;
   top: 5rem;
   background-color: white;
   border: none;

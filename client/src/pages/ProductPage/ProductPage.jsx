@@ -40,69 +40,67 @@ export const ProductPage = () => {
   };
 
   return (
-    <div className="main-container">
-      <div className="productPage">
-        <div className="productPage-block1">
-          {product.imageUrl ? (
-            <img
-              src={`http://localhost:3002${product.imageUrl}`}
-              alt={product.title}
-              className="productImage"
-            />
-          ) : (
-            <div className="noImage">Зображення відсутнє</div>
-          )}
+    <div className="productPage">
+      <div className="productPage-block1">
+        {product.imageUrl ? (
+          <img
+            src={`http://localhost:3002${product.imageUrl}`}
+            alt={product.title}
+            className="productImage"
+          />
+        ) : (
+          <div className="noImage">Зображення відсутнє</div>
+        )}
+      </div>
+      <div className="productText">
+        <h1>
+          {product.title} <hr />
+        </h1>
+        <div className="description">
+          <span>Опис</span>
+          <p>{product.description}</p>
         </div>
-        <div className="productText">
-          <h1>
-            {product.title} <hr />
-          </h1>
-          <div className="description">
-            <span>Опис</span>
-            <p>{product.description}</p>
+        <div className="specifications">
+          <span>Характеристики</span>
+          <div className="specificationsContent">
+            <span>Категорія:</span>
+            <div className="specificationItem"> {product.category}</div>
           </div>
-          <div className="specifications">
-            <span>Характеристики</span>
-            <div className="specificationsContent">
-              <span>Категорія:</span>
-              <div className="specificationItem"> {product.category}</div>
-            </div>
-            <div className="specificationsContent">
-              <span>Жанр:</span>
-              <div className="specificationItem"> {product.genres}</div>
-            </div>
-            <div className="specificationsContent">
-              <span>Кількість сторінок:</span>
-              <div className="specificationItem"> {product.pages}</div>
-            </div>
-            <div className="specificationsContent">
-              <span>Формат:</span>
-              <div className="specificationItem"> {product.format}</div>
-            </div>
-            <div className="specificationsContent">
-              <span>Автор:</span>
-              <div className="specificationItem"> {product.author}</div>
-            </div>
-            <div className="specificationsContent">
-              <span>Видання:</span>
-              <div className="specificationItem"> {product.edition}</div>
-            </div>
+          <div className="specificationsContent">
+            <span>Жанр:</span>
+            <div className="specificationItem"> {product.genres}</div>
+          </div>
+          <div className="specificationsContent">
+            <span>Кількість сторінок:</span>
+            <div className="specificationItem"> {product.pages}</div>
+          </div>
+          <div className="specificationsContent">
+            <span>Формат:</span>
+            <div className="specificationItem"> {product.format}</div>
+          </div>
+          <div className="specificationsContent">
+            <span>Автор:</span>
+            <div className="specificationItem"> {product.author}</div>
+          </div>
+          <div className="specificationsContent">
+            <span>Видання:</span>
+            <div className="specificationItem"> {product.edition}</div>
           </div>
         </div>
-        <div className="productButtons">
-          <button
-            onClick={() =>
-              dispatch(addToCart({ productId: product._id, quantity: 1 }))
-            }
-            className="addToCart"
-          >
-            Додати до кошику
-          </button>
-          <button onClick={handleGoBack} className="returnToCatalog">
-            Повернутись назад
-          </button>
-          <p> {product.price} ₴</p>
-        </div>
+      </div>
+      <div className="productButtons">
+        <button
+          onClick={() =>
+            dispatch(addToCart({ productId: product._id, quantity: 1 }))
+          }
+          className="addToCart"
+        >
+          Додати до кошику
+        </button>
+        <button onClick={handleGoBack} className="returnToCatalog">
+          Повернутись назад
+        </button>
+        <p> {product.price} ₴</p>
       </div>
     </div>
   );

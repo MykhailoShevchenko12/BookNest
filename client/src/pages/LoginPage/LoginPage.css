@@ -1,20 +1,29 @@
 .login-main {
-  min-height: 60vh;
-  margin: 70px 0px;
+  width: 90vw;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }
 
 .login-main h1,
 h2 {
+  width: 50%;
   text-align: center;
-  margin: 0;
 }
 
 .login-inputs {
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.login-inputs p {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .login-inputs input {

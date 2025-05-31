@@ -1,12 +1,13 @@
 .support-main {
-  min-height: 70vh;
-  margin-top: 50px;
-  justify-items: center;
+  width: 50vw;
+  height: 100vh;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .support-container {
-  width: 50%;
-  text-align: justify;
+  justify-content: center;
 }
 
 .support-container p {

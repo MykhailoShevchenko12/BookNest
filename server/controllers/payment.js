@@ -3,6 +3,8 @@ import crypto from "crypto";
 
 import Counter from "../models/Counter.js";
 import Orders from "../models/Orders.js";
+import Products from "../models/Products.js";
+import { finalizeOrder } from "./orders.js";
 
 dotenv.config();
 
@@ -38,6 +40,20 @@ const paymentMethod = async (req, res) => {
       return res.status(400).send("Необхідно передати userId");
     }
 
+    for (const item of items) {
+      const product = await Products.findById(item.product._id);
+      if (!product) {
+        return res
+          .status(400)
+          .json({ message: `Книга з ID ${item.product._id} не знайдена` });
+      }
+      if (product.quantity < item.quantity) {
+        return res.status(400).json({
+          message: `Недостатньо книг "${item.product.title}" на складі.`,
+        });
+      }
+    }
+
     const orderId = await getNextOrderId();
 
     const newOrder = new Orders({
@@ -48,12 +64,10 @@ const paymentMethod = async (req, res) => {
       orderId,
       date: new Date(),
       paymentMethod: "Оплатити карткою",
-      status: "Очікує оплату",
+      status: "Очікує підтвердження",
     });
 
     await newOrder.save();
-
-    console.log("🧾 Створено замовлення для оплати:", newOrder);
 
     const data = {
       public_key,
@@ -66,10 +80,8 @@ const paymentMethod = async (req, res) => {
       sandbox: 1,
       result_url: "http://localhost:3000/myorders",
       server_url:
-        "https://3b85-194-156-251-227.ngrok-free.app/api/payment/callback",
+        "https://6ce2-194-156-251-227.ngrok-free.app/api/payment/callback",
     };
-
-    console.log("Дані для LiqPay:", data);
 
     const jsonData = JSON.stringify(data);
     const base64Data = base64(jsonData);
@@ -84,13 +96,7 @@ const paymentMethod = async (req, res) => {
 
 const liqpayCallback = async (req, res) => {
   try {
-    console.log("Callback отримано:");
-
     const { data, signature } = req.body;
-
-    console.log("Отримано з LiqPay:");
-    console.log("Raw data:", data);
-    console.log("Raw signature:", signature);
 
     const expectedSignature = str_to_sign(
       process.env.privat_key + data + process.env.privat_key
@@ -105,37 +111,24 @@ const liqpayCallback = async (req, res) => {
       Buffer.from(data, "base64").toString("utf8")
     );
 
-    console.log("Розшифровані дані з LiqPay:", decodedData);
-    console.log("LiqPay order_id:", decodedData.order_id);
-
-    const allOrders = await Orders.find();
-    console.log(
-      "Всі замовлення у базі:",
-      allOrders.map((o) => o.orderId)
-    );
-
     if (decodedData.status === "success" || decodedData.status === "sandbox") {
       const orderId = decodedData.order_id;
 
       const order = await Orders.findOne({ orderId });
 
       if (!order) {
-        console.error("Замовлення не знайдено за orderId:", orderId);
         return res.status(404).json({ message: "Замовлення не знайдено" });
       }
 
-      console.log("Знайдено замовлення:", order);
-
-      order.status = "Оплачено";
+      order.payment = "Оплачено";
       await order.save();
 
-      console.log("Статус оновлено до 'Оплачено'");
+      await finalizeOrder(order);
 
       return res
         .status(200)
         .json({ message: "Замовлення оплачено та оновлено" });
     } else {
-      console.warn("Статус з LiqPay НЕ успішний:", decodedData.status);
       return res.status(400).json({ message: "Оплата неуспішна" });
     }
   } catch (error) {

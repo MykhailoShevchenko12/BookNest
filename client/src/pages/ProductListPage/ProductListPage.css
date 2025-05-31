@@ -1,38 +1,63 @@
+.productListContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.productList-span {
+  text-align: center;
+  margin: 0;
+}
+
+.productList-span span {
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.productList {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12 колонок */
+  gap: 1rem;
+}
+
+.category-page {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  justify-content: center;
+}
+
 .category-main {
-  width: 300px;
-  height: 35px;
+  width: auto;
+  height: auto;
   background-color: #eca16e;
   border-radius: 20px;
   align-content: center;
   text-align: center;
   margin-left: 30px;
   justify-content: center;
+  padding: 10px 20px;
 }
 
 .header-category {
   justify-items: center;
+  margin-top: 3rem;
 }
 
 .category-main span {
   color: rgb(240, 240, 240);
   font-weight: bold;
-}
-
-.productListContainer {
-  width: 1620px;
-  height: auto;
-  min-height: 60vh;
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.productList {
-  width: 1620px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 колонок */
-  gap: 2зч; /* відступ між елементами */
-  justify-content: first baseline;
 }
 
 .productListPages {

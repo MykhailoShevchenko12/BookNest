@@ -33,63 +33,58 @@ export const LoginPage = () => {
     }
   };
   return (
-    <div className="main-container">
-      <div className="login-main">
-        <h1>
-          Авторизуйтесь, щоб переглянути свої замовлення, улюблені книги та
-          рекомендації!👤
-        </h1>
-        <div className="login-inputs">
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Введіть свій username"
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Введіть пароль"
-          />
-        </div>
-        <div className="login-buttons">
-          <button onClick={handlSubmit}>Увійти</button>
-          <Link
-            to="/register"
-            style={{ textDecoration: "none", color: "#222" }}
-          >
-            Потрібно зареєструватися?
-          </Link>
-        </div>
-        <div className="login-text">
-          <ul>
-            Увійдіть до свого акаунту, щоб продовжити мандри у світ літератури
-            та скористатися всіма перевагами нашого магазину:
-            <li>🛒 Легке керування замовленнями.</li>
-            <li>💖 Збереження улюблених книжкових добірок.</li>
-            <li>🎁 Спеціальні пропозиції та знижки для постійних клієнтів.</li>
-          </ul>
-          <ul>
-            Ми зобов’язуємось:
-            <li>
-              Захищати вашу інформацію за допомогою сучасних технологій безпеки.
-            </li>
-            <li>
-              Не передавати ваші дані третім особам без вашої згоди, окрім
-              випадків, передбачених законом.
-            </li>
-            <li>
-              Надавати вам можливість оновлювати або видаляти свої дані на
-              запит.
-            </li>
-          </ul>
-          <p>
-            🎉 Новий користувач? Створіть акаунт за кілька хвилин і відкрийте
-            для себе безмежний книжковий світ:{" "}
-            <Link to="/register">Зареєструватися</Link>.
-          </p>
-        </div>
+    <div className="login-main">
+      <h1>
+        Авторизуйтесь, щоб переглянути свої замовлення, улюблені книги та
+        рекомендації!👤
+      </h1>
+      <div className="login-inputs">
+        <p>Авторизація користувача</p>
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Введіть свій username"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Введіть пароль"
+        />
+      </div>
+      <div className="login-buttons">
+        <button onClick={handlSubmit}>Увійти</button>
+        <Link to="/register" style={{ textDecoration: "none", color: "#222" }}>
+          Потрібно зареєструватися?
+        </Link>
+      </div>
+      <div className="login-text">
+        <ul>
+          Увійдіть до свого акаунту, щоб продовжити мандри у світ літератури та
+          скористатися всіма перевагами нашого магазину:
+          <li>🛒 Легке керування замовленнями.</li>
+          <li>💖 Збереження улюблених книжкових добірок.</li>
+          <li>🎁 Спеціальні пропозиції та знижки для постійних клієнтів.</li>
+        </ul>
+        <ul>
+          Ми зобов’язуємось:
+          <li>
+            Захищати вашу інформацію за допомогою сучасних технологій безпеки.
+          </li>
+          <li>
+            Не передавати ваші дані третім особам без вашої згоди, окрім
+            випадків, передбачених законом.
+          </li>
+          <li>
+            Надавати вам можливість оновлювати або видаляти свої дані на запит.
+          </li>
+        </ul>
+        <p>
+          🎉 Новий користувач? Створіть акаунт за кілька хвилин і відкрийте для
+          себе безмежний книжковий світ:{" "}
+          <Link to="/register">Зареєструватися</Link>.
+        </p>
       </div>
     </div>
   );

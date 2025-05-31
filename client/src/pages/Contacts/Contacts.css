@@ -1,6 +1,9 @@
 .contacts-main {
-  min-height: 70vh;
-  margin-top: 50px;
+  width: 60%;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
   justify-items: center;
 }
 

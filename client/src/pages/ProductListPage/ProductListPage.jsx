@@ -77,42 +77,43 @@ export const ProductListPage = () => {
   }
 
   return (
-    <div className="main-container">
-      <div className="productListContainer">
-        <div>
-          <div className="productList">
-            {currentItems.map((product, i) => (
-              <Link
-                key={i}
-                to={`/product/${product._id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <BookItem
-                  key={i}
-                  id={product._id}
-                  imageUrl={product.imageUrl}
-                  title={product.title}
-                />
-              </Link>
-            ))}
-          </div>
-          <div className="productListPages">
-            {totalPages > 1 &&
-              Array.from({ length: totalPages }, (_, index) => index + 1).map(
-                (pageNumber) => (
-                  <button
-                    key={pageNumber}
-                    className={`productListPagesButtons ${
-                      currentPage === pageNumber ? "active" : ""
-                    }`}
-                    onClick={() => handlePageChange(pageNumber)}
-                  >
-                    {pageNumber}
-                  </button>
-                )
-              )}
-          </div>
+    <div className="category-page">
+      <div className="header-category">
+        <div className="category-main">
+          <span>Відкрийте для себе книги, які хочеться читати</span>
         </div>
+      </div>
+      <div className="productListContainer productList">
+        {currentItems.map((product, i) => (
+          <Link
+            key={i}
+            to={`/product/${product._id}`}
+            style={{ textDecoration: "none" }}
+          >
+            <BookItem
+              key={i}
+              id={product._id}
+              imageUrl={product.imageUrl}
+              title={product.title}
+            />
+          </Link>
+        ))}
+      </div>
+      <div className="productListPages">
+        {totalPages > 1 &&
+          Array.from({ length: totalPages }, (_, index) => index + 1).map(
+            (pageNumber) => (
+              <button
+                key={pageNumber}
+                className={`productListPagesButtons ${
+                  currentPage === pageNumber ? "active" : ""
+                }`}
+                onClick={() => handlePageChange(pageNumber)}
+              >
+                {pageNumber}
+              </button>
+            )
+          )}
       </div>
     </div>
   );

@@ -38,29 +38,27 @@ export const SearchPage = () => {
   }, [query]);
 
   return (
-    <div className="main-container">
-      <div className="search-results-container">
-        <h2>Результати пошуку для: "{query}"</h2>
-        {searchResults.length === 0 ? (
-          <p>Нічого не знайдено.</p>
-        ) : (
-          <div className="search-results">
-            {searchResults.map((book) => (
-              <Link
-                key={book._id}
-                to={`/product/${book._id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <BookItem
-                  id={book._id}
-                  imageUrl={book.imageUrl}
-                  title={book.title}
-                />
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
+    <div className="search-results-container">
+      <h2>Результати пошуку для: «{query}»</h2>
+      {searchResults.length === 0 ? (
+        <p>Нічого не знайдено.</p>
+      ) : (
+        <div className="search-results">
+          {searchResults.map((book) => (
+            <Link
+              key={book._id}
+              to={`/product/${book._id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <BookItem
+                id={book._id}
+                imageUrl={book.imageUrl}
+                title={book.title}
+              />
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

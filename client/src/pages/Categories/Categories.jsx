@@ -108,7 +108,7 @@ export const Categories = () => {
   }
 
   return (
-    <div className="main-container">
+    <div className="categor-page">
       <div className="header-category">
         <div className="category-main">
           <span>{categoryMapping[category.toLowerCase()] || category}</span>

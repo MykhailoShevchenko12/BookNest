@@ -102,8 +102,7 @@ export const OrderPage = () => {
         );
 
         if (!res.ok) {
-          const errorData = await res.text();
-          console.error("Error response:", errorData);
+          const errorData = await res.json(); // отримати JSON
           throw new Error(errorData.message || "Помилка при створенні платежу");
         }
 
@@ -129,7 +128,7 @@ export const OrderPage = () => {
         document.body.appendChild(form);
         form.submit();
       } catch (err) {
-        toast.error("Помилка при створенні платежу");
+        toast.error(err.message || "Помилка при створенні платежу");
         console.error("Payment error:", err);
       }
     }
@@ -148,141 +147,144 @@ export const OrderPage = () => {
     }
   }, [success, dispatch, navigate]);
 
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+    }
+  }, [error]);
+
   return (
-    <div className="main-container">
-      <form className="order" onSubmit={handleSubmit}>
-        <h2>Оформлення замовлення</h2>
-        <div className="page-info">
-          <div className="left-side">
-            <div className="order-info">
-              <p>Інформація про отримувача</p>
-              <div className="user-info">
+    <form className="order" onSubmit={handleSubmit}>
+      <h2>Оформлення замовлення</h2>
+      <div className="page-info">
+        <div className="left-side">
+          <div className="order-info">
+            <p>Інформація про отримувача</p>
+            <div className="user-info">
+              <input
+                type="text"
+                placeholder="Прізвище"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Ім'я"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="По Батькові"
+                name="middleName"
+                value={formData.middleName}
+                onChange={handleInputChange}
+              />
+            </div>
+            <p>Контактна інформація</p>
+            <div className="user-info">
+              <input
+                type="email"
+                placeholder="Поштова скринька"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Номер телефону"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <p>Місто отримувача</p>
+            <div className="delivery-info">
+              <input
+                type="text"
+                placeholder="Назва міста"
+                name="city"
+                value={formData.city}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <p>Доставка</p>
+            <div className="post-info">
+              <button type="button" onClick={handleBranchClick}>
+                Нова Пошта: відділення
+              </button>
+              {showBranchInput && (
                 <input
-                  type="text"
-                  placeholder="Прізвище"
-                  name="lastName"
-                  value={formData.lastName}
+                  type="number"
+                  name="branch"
+                  placeholder="№ відділення"
+                  value={formData.branch}
                   onChange={handleInputChange}
                   required
                 />
+              )}
+              <button type="button" onClick={handlePostomatClick}>
+                Нова Пошта: поштомат
+              </button>
+              {showPostomatInput && (
                 <input
-                  type="text"
-                  placeholder="Ім'я"
-                  name="firstName"
-                  value={formData.firstName}
+                  type="number"
+                  name="postomat"
+                  placeholder="№ поштомат"
+                  value={formData.postomat}
                   onChange={handleInputChange}
                   required
                 />
+              )}
+            </div>
+            <p>Спосіб оплати</p>
+            <div className="payment-method">
+              <label htmlFor="payment-method-cash">
                 <input
-                  type="text"
-                  placeholder="По Батькові"
-                  name="middleName"
-                  value={formData.middleName}
-                  onChange={handleInputChange}
+                  type="radio"
+                  id="payment-method-cash"
+                  name="payment-method"
+                  checked={
+                    formData.paymentMethod === "Оплата при отриманні товару"
+                  }
+                  onChange={handlePaymentChange}
                 />
-              </div>
-              <p>Контактна інформація</p>
-              <div className="user-info">
+                <p>Оплата при отриманні товару</p>
+              </label>
+              <label htmlFor="payment-method-card">
                 <input
-                  type="email"
-                  placeholder="Поштова скринька"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
+                  type="radio"
+                  id="payment-method-card"
+                  name="payment-method"
+                  checked={formData.paymentMethod === "Оплатити карткою"}
+                  onChange={handlePaymentChange}
                 />
-                <input
-                  type="text"
-                  placeholder="Номер телефону"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <p>Місто отримувача</p>
-              <div className="delivery-info">
-                <input
-                  type="text"
-                  placeholder="Назва міста"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <p>Доставка</p>
-              <div className="post-info">
-                <button type="button" onClick={handleBranchClick}>
-                  Нова Пошта: відділення
-                </button>
-                {showBranchInput && (
-                  <input
-                    type="number"
-                    name="branch"
-                    placeholder="№ відділення"
-                    value={formData.branch}
-                    onChange={handleInputChange}
-                    required
-                  />
-                )}
-                <button type="button" onClick={handlePostomatClick}>
-                  Нова Пошта: поштомат
-                </button>
-                {showPostomatInput && (
-                  <input
-                    type="number"
-                    name="postomat"
-                    placeholder="№ поштомат"
-                    value={formData.postomat}
-                    onChange={handleInputChange}
-                    required
-                  />
-                )}
-              </div>
-              <p>Спосіб оплати</p>
-              <div className="payment-method">
-                <label htmlFor="payment-method-cash">
-                  <input
-                    type="radio"
-                    id="payment-method-cash"
-                    name="payment-method"
-                    checked={
-                      formData.paymentMethod === "Оплата при отриманні товару"
-                    }
-                    onChange={handlePaymentChange}
-                  />
-                  <p>Оплата при отриманні товару</p>
-                </label>
-                <label htmlFor="payment-method-card">
-                  <input
-                    type="radio"
-                    id="payment-method-card"
-                    name="payment-method"
-                    checked={formData.paymentMethod === "Оплатити карткою"}
-                    onChange={handlePaymentChange}
-                  />
-                  <p>Оплатити карткою</p>
-                </label>
-              </div>
+                <p>Оплатити карткою</p>
+              </label>
             </div>
           </div>
-          <div className="order-cart-total right-side">
-            <CartTotal />
-            <button type="submit" disabled={loading}>
-              {loading ? "Оформлення..." : "Підтвердити замовлення"}
-            </button>
-            {error && <p className="order-error">{error}</p>}
-          </div>
         </div>
-        <div className="order-warning">
-          <p>
-            *Ваші особисті дані, включаючи ім'я, адресу, контактну інформацію та
-            платіжні реквізити, збираються та обробляються виключно з метою
-            виконання вашого замовлення...
-          </p>
+        <div className="order-cart-total right-side">
+          <CartTotal />
+          <button type="submit" disabled={loading}>
+            {loading ? "Оформлення..." : "Підтвердити замовлення"}
+          </button>
         </div>
-      </form>
-    </div>
+      </div>
+      <div className="order-warning">
+        <p>
+          *Ваші особисті дані, включаючи ім'я, адресу, контактну інформацію та
+          платіжні реквізити, збираються та обробляються виключно з метою
+          виконання вашого замовлення...
+        </p>
+      </div>
+    </form>
   );
 };

@@ -1,7 +1,12 @@
 .search-results-container {
-  margin-top: 50px;
-  min-height: 75vh;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
 }
 
 .search-results {

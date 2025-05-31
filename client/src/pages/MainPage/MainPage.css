@@ -1,65 +1,82 @@
 .main-page {
-  margin-top: 50px;
-}
-
-.bookcategorytext {
-  font-weight: bold;
-  padding-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: auto;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .preview-section {
   display: flex;
-  width: auto;
-  height: 30rem;
-  margin-bottom: 50px;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .banner {
-  display: inline-block;
+  max-width: 100%;
+  min-height: 20rem;
+  max-height: 30rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  align-content: center;
-  justify-items: center;
-  width: 73rem;
-  height: 30rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../../images/banner.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+}
+
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
   border-radius: 10px;
 }
 
 .banner-text {
+  min-width: 100%;
+  height: auto;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  width: 500px;
   color: #ffe59c;
-  align-content: center;
   text-align: center;
+  align-items: center;
   justify-content: center;
 }
 
+.banner-text h1,
+h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
 .search-pannel {
-  width: 400px;
-  height: 35px;
+  width: 25rem;
+  height: 2rem;
   border: none;
   outline: none;
   border-radius: 10px;
   background-color: whitesmoke;
-  margin-left: 55px;
   padding: 0px 20px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   color: #454545;
   box-sizing: border-box;
+  margin-top: 0.5rem;
 }
 
 /*----special-offers------*/
 .special-offers {
-  margin-left: 20px;
+  min-width: 28rem;
+  margin-left: 1rem;
 }
 
 .special-offers span {
@@ -69,13 +86,14 @@
 }
 
 .offer {
-  width: 400px;
+  width: 100%;
   height: 9rem;
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 10px;
   background-color: #fdf6e3;
   display: flex;
+  justify-content: space-around;
 }
 
 .offer-book-img {
@@ -83,8 +101,7 @@
   height: 7rem;
   border-radius: 0.3rem;
   margin-top: 1rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .offer p {
@@ -109,10 +126,28 @@
   background-color: #ffe59c;
 }
 
+.custom-icon {
+  font-size: 24px;
+  color: #be941f;
+  transition: transform 0.3s ease;
+}
+
+.custom-icon:hover {
+  transform: translateX(5px); /* Ефект при наведенні */
+}
+
+/*--------------------------*/
+
 .bookcategory {
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.bookcategorytext {
+  font-weight: bold;
 }
 
 .bookcategorylink {
@@ -124,12 +159,14 @@
 }
 
 .category-top {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
 .main-inspiration-emailnotification {
-  margin-top: 50px;
+  width: 80%;
+  margin-top: 2rem;
 }
 
 .inspiration h1 {
@@ -204,13 +241,142 @@
   background-color: hsl(0, 30%, 31%);
 }
 
-.custom-icon {
-  margin-left: 1rem;
-  font-size: 24px;
-  color: #be941f;
-  transition: transform 0.3s ease;
+@media (max-width: 1720px) {
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+  .search-pannel {
+    width: 20rem;
+  }
 }
 
-.custom-icon:hover {
-  transform: translateX(5px); /* Ефект при наведенні */
+@media (max-width: 1500px) {
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+  .search-pannel {
+    width: 20rem;
+  }
+
+  .preview-section {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .banner {
+    width: 70%;
+    max-width: 70%;
+  }
+
+  .special-offers {
+    width: 70%;
+    max-width: 70%;
+    margin: 2rem 0;
+  }
+
+  .offer {
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+  }
+
+  .offer-book-img {
+    width: 5rem;
+    height: 7rem;
+    border-radius: 0.3rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .banner-text h1 {
+    font-size: 1.2rem;
+  }
+  .banner-text h3 {
+    font-size: 1rem;
+  }
+  .search-pannel {
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 10px;
+  }
+
+  .special-offers {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+  .banner-text h3 {
+    font-size: 1rem;
+  }
+  .search-pannel {
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 10px;
+  }
+
+  .preview-section {
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    width: 100%;
+    min-width: 483px;
+  }
+
+  .special-offers {
+    width: 100%;
+    min-width: 483px;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    min-width: 448px;
+  }
+
+  .special-offers {
+    min-width: 448px;
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    width: 337px;
+  }
+
+  .banner img {
+    width: 337px;
+  }
+
+  .banner-text {
+    width: 337px;
+  }
+
+  .special-offers {
+    width: 337px;
+    margin: 0.5rem 0rem;
+  }
+
+  .banner-text h1 {
+    font-size: 0.5rem;
+  }
+  .banner-text h3 {
+    font-size: 0.4rem;
+  }
+  .search-pannel {
+    width: 13rem;
+    height: 1rem;
+    font-size: 0.5rem;
+  }
 }

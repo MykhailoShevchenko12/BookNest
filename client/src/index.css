@@ -3,20 +3,29 @@
 body {
   font-family: "Open Sans", sans-serif;
   background: #ffe59c;
-}
-
-.main-container {
-  margin: 20px 150px;
-}
-
-/* Для Chrome, Safari, Edge */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
 }
 
-/* Для Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) and (max-width: 576px) {
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+}
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+}
+
+@media (min-width: 1280px) and (max-width: 1920px) {
 }

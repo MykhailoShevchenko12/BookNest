@@ -37,87 +37,83 @@ export const Cart = () => {
 
   if (!Array.isArray(cart) || cart.length === 0) {
     return (
-      <div className="main-container">
-        <div className="cart">
-          <div className="cart-header">
-            <h1>Ваш кошик порожній</h1>
-            <Link
-              to={"/products"}
-              style={{
-                textDecoration: "none",
-                color: "#222",
-                fontSize: "16px",
-                fontWeight: "bold",
-              }}
-            >
-              <p>Погляньте, що ми для вас приготували!</p>
-            </Link>
-          </div>
+      <div className="cart">
+        <div className="cart-header">
+          <h1>Ваш кошик порожній</h1>
+          <Link
+            to={"/products"}
+            style={{
+              textDecoration: "none",
+              color: "#222",
+              fontSize: "16px",
+              fontWeight: "bold",
+            }}
+          >
+            <p>Погляньте, що ми для вас приготували!</p>
+          </Link>
         </div>
       </div>
     );
   }
   return (
-    <div className="main-container">
-      <div className="cart">
-        <div className="cart-header">
-          <h1>Ваш кошик 📖</h1>
-        </div>
-        <hr />
-        <div className="cart-items">
-          {cart.map((item, index) => (
-            <div key={item.product._id || index}>
-              <div className="cart-items cart-item">
-                <img
-                  src={`http://localhost:3002${item.product.imageUrl}`}
-                  alt="Зображення"
-                  className="items-image"
-                />
-                <div className="cart-items-title">{item.product.title}</div>
-                <div className="cart-items-quantity">
-                  <button
-                    onClick={() => {
-                      if (item.quantity === 1) {
-                        handleRemove(item.product._id);
-                      } else {
-                        dispatch(decrementQuantity(item.product._id));
-                      }
-                    }}
-                  >
-                    -
-                  </button>
-                  <p>{item.quantity}</p>
-                  <button
-                    onClick={() => {
-                      dispatch(incrementQuantity(item.product._id));
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
-                <p>{item.product.price}₴</p>
-                <img
-                  src={removeFromCart_icon}
-                  alt="Видалити з кошика"
-                  className="removefromcart-icon"
-                  onClick={() => handleRemove(item.product._id)}
-                />
+    <div className="cart">
+      <div className="cart-header">
+        <h1>Ваш кошик 📖</h1>
+      </div>
+      <hr />
+      <div className="cart-items">
+        {cart.map((item, index) => (
+          <div key={item.product._id || index}>
+            <div className="cart-items cart-item">
+              <img
+                src={`http://localhost:3002${item.product.imageUrl}`}
+                alt="Зображення"
+                className="items-image"
+              />
+              <div className="cart-items-title">{item.product.title}</div>
+              <div className="cart-items-quantity">
+                <button
+                  onClick={() => {
+                    if (item.quantity === 1) {
+                      handleRemove(item.product._id);
+                    } else {
+                      dispatch(decrementQuantity(item.product._id));
+                    }
+                  }}
+                >
+                  -
+                </button>
+                <p>{item.quantity}</p>
+                <button
+                  onClick={() => {
+                    dispatch(incrementQuantity(item.product._id));
+                  }}
+                >
+                  +
+                </button>
               </div>
-              <hr />
+              <p>{item.product.price}₴</p>
+              <img
+                src={removeFromCart_icon}
+                alt="Видалити з кошика"
+                className="removefromcart-icon"
+                onClick={() => handleRemove(item.product._id)}
+              />
             </div>
-          ))}
-        </div>
-        <div className="cart-total">
-          <CartTotal />
-
-          <div className="cart-buttons">
-            <button onClick={handleProceedToOrder} className="cart-order">
-              Перейти до оформлення замовлення
-            </button>
-            <button onClick={handleGoBack} className="cart-return-btn">
-              Повернутись назад
-            </button>
+            <hr />
           </div>
+        ))}
+      </div>
+      <div className="cart-total">
+        <CartTotal />
+
+        <div className="cart-buttons">
+          <button onClick={handleProceedToOrder} className="cart-order">
+            Перейти до оформлення замовлення
+          </button>
+          <button onClick={handleGoBack} className="cart-return-btn">
+            Повернутись назад
+          </button>
         </div>
       </div>
     </div>
