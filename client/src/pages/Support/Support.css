@@ -1,12 +1,17 @@
 .support-main {
   width: 50vw;
-  height: 100vh;
+  height: auto;
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
 }
 
 .support-container {
+  justify-content: center;
+}
+
+.support-container h2 {
+  width: 100%;
   justify-content: center;
 }
 
@@ -24,11 +29,13 @@
 .support-form {
   justify-items: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .support-form-question {
   display: grid;
   justify-items: center;
+  margin-top: 1rem;
 }
 
 .support-email-input {
